@@ -10,12 +10,20 @@
     "noEmit": true,
     "strict": true,
     "target": "esnext",
-    "plugins": [{ "name": "typescript-tslint-plugin" }]
+    "plugins": [{ "name": "typescript-tslint-plugin" }],
+    "baseUrl": "src",
+    "paths": {
+      "src/*": ["./*"],
+    },
+    "module": "es6"
   },
   "exclude": [
     "node_modules",
     "babel.config.js",
     "metro.config.js",
     "jest.config.js"
-  ]
+  ],
+  "include": [
+    "src/**/*"
+  ],
 }

@@ -1,15 +1,17 @@
 import React, { ReactElement } from 'react';
-import { SafeAreaView, Text, StatusBar } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
+import { PersistGate } from 'redux-persist/lib/integration/react';
+import { Provider } from 'react-redux';
+
+import store, { persistor } from './redux';
+import MainNavigator from 'navigation';
 
 const App = (): ReactElement => {
   return (
-    <NavigationContainer>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <Text>TS Example</Text>
-      </SafeAreaView>
-    </NavigationContainer>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <MainNavigator />
+      </PersistGate>
+    </Provider>
   );
 };
 
