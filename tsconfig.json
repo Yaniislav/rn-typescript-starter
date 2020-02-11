@@ -12,9 +12,6 @@
     "target": "esnext",
     "plugins": [{ "name": "typescript-tslint-plugin" }],
     "baseUrl": "src",
-    "paths": {
-      "src/*": ["./*"],
-    },
     "module": "es6"
   },
   "exclude": [

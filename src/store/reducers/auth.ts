@@ -2,16 +2,16 @@ import { createReducer } from 'redux-act';
 
 import { didSignInAction } from '../actions';
 
-interface AuthState {
+export interface IAuthState {
   accessToken?: string;
   refreshToken?: string;
 }
 
-const reducer = createReducer<AuthState>({}, {});
+const reducer = createReducer<IAuthState>({}, {});
 
 reducer.on(
   didSignInAction,
-  (state: AuthState, payload: Record<string, string>): AuthState => ({
+  (state: IAuthState, payload: Record<string, string>): IAuthState => ({
     ...state,
     ...payload,
   }),

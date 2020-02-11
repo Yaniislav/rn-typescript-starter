@@ -2,7 +2,6 @@ import { createStore, compose, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 
 import { persistStore, persistReducer } from 'redux-persist';
-// import storage from 'redux-persist/lib/storage';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import AsyncStorage from '@react-native-community/async-storage';
 
@@ -34,5 +33,7 @@ sagaMiddleware.run(rootSaga);
 const persistor = persistStore(store);
 
 export { persistor };
+
+export type RootState = ReturnType<typeof reducer>;
 
 export default store;

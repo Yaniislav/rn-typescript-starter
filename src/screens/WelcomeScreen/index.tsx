@@ -1,13 +1,15 @@
 import React, { ReactElement, useCallback } from 'react';
 import { View, Text, Button } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
+import { RouteProp } from '@react-navigation/native';
 import { useDispatch } from 'react-redux';
 
-import { AuthStackParamList } from 'navigation/AuthStack';
-import { signInAction } from 'app-redux/actions';
+import { StackParamList } from 'navigation';
+import { signInAction } from 'store/actions';
 
 export type WelcomeScreenProps = {
-  navigation: StackNavigationProp<AuthStackParamList, 'SignIn'>;
+  navigation: StackNavigationProp<StackParamList, 'SignIn'>;
+  route: RouteProp<StackParamList, 'SignIn'>;
 };
 
 const WelcomeScreen = ({ navigation }: WelcomeScreenProps): ReactElement => {
