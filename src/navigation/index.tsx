@@ -8,6 +8,7 @@ import SignInScreen from 'screens/SignInScreen';
 import HomeScreen from 'screens/HomeScreen';
 
 import { userLoggedInSelector } from 'store/selectors';
+import { navigationRef } from './RootNavigation';
 
 export type StackParamList = {
   Welcome: undefined;
@@ -34,7 +35,7 @@ export default function MainNavigator(): ReactElement {
   }, [isLoggedIn]);
 
   return (
-    <NavigationContainer>
+    <NavigationContainer ref={navigationRef}>
       <Stack.Navigator>{renderContent()}</Stack.Navigator>
     </NavigationContainer>
   );
