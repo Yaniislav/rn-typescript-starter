@@ -16,6 +16,10 @@ export type StackParamList = {
   Home: undefined;
 };
 
+const unAuthScreensConfiguration = {
+  headerShown: false,
+};
+
 const Stack = createStackNavigator<StackParamList>();
 
 export default function MainNavigator(): ReactElement {
@@ -25,8 +29,16 @@ export default function MainNavigator(): ReactElement {
     if (!isLoggedIn) {
       return (
         <>
-          <Stack.Screen name={'Welcome'} component={WelcomeScreen} />
-          <Stack.Screen name={'SignIn'} component={SignInScreen} />
+          <Stack.Screen
+            options={unAuthScreensConfiguration}
+            name={'Welcome'}
+            component={WelcomeScreen}
+          />
+          <Stack.Screen
+            name={'SignIn'}
+            options={unAuthScreensConfiguration}
+            component={SignInScreen}
+          />
         </>
       );
     }

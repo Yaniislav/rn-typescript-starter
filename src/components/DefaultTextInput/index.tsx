@@ -1,18 +1,21 @@
-import React, { FC } from 'react';
+import React, { FC, Ref, forwardRef } from 'react';
 import { TextInput, TextInputProperties } from 'react-native';
 
 import styles from './styles';
 
 const DefaultTextInput: FC<TextInputProperties> = (
-  props: TextInputProperties,
+  { style, ...rest }: TextInputProperties,
+  ref: Ref<TextInput>,
 ) => {
   return (
     <TextInput
       blurOnSubmit={false}
       underlineColorAndroid="transparent"
-      {...props}
+      {...rest}
+      style={[styles.fontStyle, style]}
+      ref={ref}
     />
   );
 };
 
-export default DefaultTextInput;
+export default forwardRef(DefaultTextInput);

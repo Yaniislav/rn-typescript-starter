@@ -1,11 +1,12 @@
 import React, { ReactElement, useCallback } from 'react';
-import { View, Text, Button } from 'react-native';
+import { View } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
-import { useDispatch } from 'react-redux';
 
 import { StackParamList } from 'navigation';
-import { signInAction } from 'store/actions';
+import DefaultText from 'components/DefaultText';
+import DefaultButton from 'components/DefaultButton';
+import styles from './styles';
 
 export type WelcomeScreenProps = {
   navigation: StackNavigationProp<StackParamList, 'SignIn'>;
@@ -13,22 +14,21 @@ export type WelcomeScreenProps = {
 };
 
 const WelcomeScreen = ({ navigation }: WelcomeScreenProps): ReactElement => {
-  const dispatch = useDispatch();
-
   const onSignInPress = useCallback(() => {
     navigation.push('SignIn');
-    dispatch(
-      signInAction({
-        email: 'Test',
-        password: 'Test',
-      }),
-    );
-  }, [navigation, dispatch]);
+  }, [navigation]);
 
   return (
-    <View>
-      <Text>Welcome to Starter</Text>
-      <Button title={'Go To Sign In'} onPress={onSignInPress} />
+    <View style={styles.container}>
+      <DefaultText style={styles.title} size="large">
+        Welcome to Starter
+      </DefaultText>
+      <DefaultButton title={'Sign In'} onPress={onSignInPress} />
+      <DefaultButton
+        style={styles.signUpButton}
+        title={'Sign Up'}
+        type="outline"
+      />
     </View>
   );
 };

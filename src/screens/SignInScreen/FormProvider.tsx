@@ -1,5 +1,5 @@
 import React, { ReactChild } from 'react';
-import { Formik, FormikValues } from 'formik';
+import { Formik, FormikProps } from 'formik';
 import { object, string } from 'yup';
 
 import ISignInAction from 'store/actions/auth/ISignInAction';
@@ -21,7 +21,7 @@ const initialValues: ISignInAction = {
 
 export interface ISignInFormProps {
   onSubmit: (values: ISignInAction) => void;
-  children?: (values: FormikValues) => ReactChild;
+  children?: (values: FormikProps<ISignInAction>) => ReactChild;
 }
 
 const FormProvider: React.FunctionComponent<ISignInFormProps> = ({
