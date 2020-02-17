@@ -1,6 +1,11 @@
 import { createReducer } from 'redux-act';
 
-import { didSignInAction } from '../actions';
+import {
+  didSignInAction,
+  didSignUpAction,
+  didUpdateTokensAction,
+  signOutAction,
+} from '../actions';
 
 export interface IAuthState {
   accessToken?: string;
@@ -9,12 +14,14 @@ export interface IAuthState {
 
 const reducer = createReducer<IAuthState>({}, {});
 
-reducer.on(
-  didSignInAction,
-  (state: IAuthState, payload: Record<string, string>): IAuthState => ({
-    ...state,
-    ...payload,
-  }),
-);
+const authanticateUser = (_: any, payload: IAuthState): IAuthState => ({
+  accessToken: payload.accessToken,
+  refreshToken: payload.refreshToken,
+});
+
+reducer.on(didSignInAction, authanticateUser);
+reducer.on(didSignUpAction, authanticateUser);
+reducer.on(didUpdateTokensAction, authanticateUser);
+reducer.on(signOutAction, () => ({}));
 
 export default reducer;

@@ -9,8 +9,8 @@ import DefaultButton from 'components/DefaultButton';
 import styles from './styles';
 
 export type WelcomeScreenProps = {
-  navigation: StackNavigationProp<StackParamList, 'SignIn'>;
-  route: RouteProp<StackParamList, 'SignIn'>;
+  navigation: StackNavigationProp<StackParamList, 'Welcome'>;
+  route: RouteProp<StackParamList, 'Welcome'>;
 };
 
 const WelcomeScreen = ({ navigation }: WelcomeScreenProps): ReactElement => {

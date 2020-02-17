@@ -8,6 +8,7 @@ interface IStyles {
 const styles = StyleSheet.create<IStyles>({
   fontStyle: {
     fontSize: scale(14),
+    color: 'black',
   },
 });
 
