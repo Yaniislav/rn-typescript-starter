@@ -20,7 +20,5 @@ function* signInSaga({
 }
 
 export default function* authSaga(): Generator {
-  console.log('Here12');
-
   yield all([takeLatest(signInAction, signInSaga)]);
 }
