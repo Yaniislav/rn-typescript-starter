@@ -1,6 +1,17 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+project 'lezzoo',
+'Debug' => :debug,
+'Release' => :release,
+'Dev.Debug' => :debug,
+'Dev.Release' => :release,
+'Staging.Debug' => :debug,
+'Staging.Release' => :release,
+'Prod.Debug' => :debug,
+'Prod.Release' => :release
+
+
 target 'lezzoo' do
   # Pods for lezzoo
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
