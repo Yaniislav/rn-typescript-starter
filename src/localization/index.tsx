@@ -28,6 +28,7 @@ export const initI18n = (lng: string): void => {
       },
       lng,
       fallbackLng: 'en',
+      ns: ['buttons'],
       interpolation: {
         escapeValue: false,
       },

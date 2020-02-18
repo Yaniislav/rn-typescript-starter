@@ -1,5 +1,9 @@
 {
-  "translation": {
-    "hello": "مرحبا بالعالم"
+  "buttons": {
+    "signin": "تسجيل الدخول",
+    "signup": "سجل"
+  },
+  "welcomeScreen": {
+    "title": "مرحبًا بك في البداية"
   }
 }

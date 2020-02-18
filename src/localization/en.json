@@ -1,5 +1,9 @@
 {
-  "translation": {
-    "hello": "Hello World"
+  "buttons": {
+    "signin": "Sign In",
+    "signup": "Sign Up"
+  },
+  "welcomeScreen": {
+    "title": "Welcome to the starter"
   }
 }
