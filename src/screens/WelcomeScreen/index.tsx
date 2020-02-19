@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback } from 'react';
+import React, { ReactElement, useCallback, useEffect } from 'react';
 import { View } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
@@ -7,13 +7,18 @@ import { StackParamList } from 'navigation';
 import DefaultText from 'components/DefaultText';
 import DefaultButton from 'components/DefaultButton';
 import styles from './styles';
+import { useTranslation } from 'react-i18next';
 
 export type WelcomeScreenProps = {
   navigation: StackNavigationProp<StackParamList, 'Welcome'>;
   route: RouteProp<StackParamList, 'Welcome'>;
 };
 
+const namespaces = ['welcomeScreen', 'buttons'];
+
 const WelcomeScreen = ({ navigation }: WelcomeScreenProps): ReactElement => {
+  const { t } = useTranslation(namespaces);
+
   const onSignInPress = useCallback(() => {
     navigation.push('SignIn');
   }, [navigation]);
@@ -21,12 +26,12 @@ const WelcomeScreen = ({ navigation }: WelcomeScreenProps): ReactElement => {
   return (
     <View style={styles.container}>
       <DefaultText style={styles.title} size="large">
-        Welcome to Starter
+        {t('title')}
       </DefaultText>
-      <DefaultButton title={'Sign In'} onPress={onSignInPress} />
+      <DefaultButton title={t('buttons:signin')} onPress={onSignInPress} />
       <DefaultButton
         style={styles.signUpButton}
-        title={'Sign Up'}
+        title={t('buttons:signup')}
         type="outline"
       />
     </View>

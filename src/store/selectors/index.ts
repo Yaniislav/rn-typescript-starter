@@ -10,3 +10,5 @@ export const userLoggedInSelector = createSelector<
   state => state.auth,
   auth => !!auth.accessToken,
 );
+
+export const configSelector = (state: RootState) => state.config;
