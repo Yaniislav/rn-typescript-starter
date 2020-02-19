@@ -47,6 +47,8 @@ target 'lezzoo' do
 
   pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
 
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'lezzooTests' do
     inherit! :search_paths
     # Pods for testing
