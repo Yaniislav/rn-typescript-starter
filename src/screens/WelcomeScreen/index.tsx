@@ -1,4 +1,4 @@
-import React, { ReactElement, useCallback, useEffect } from 'react';
+import React, { ReactElement, useCallback } from 'react';
 import { View } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
