@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react';
 import {
   KeyboardAwareScrollView,
   KeyboardAwareScrollViewProps,
-} from 'react-native-keyboard-aware-scroll-view';
+} from '@codler/react-native-keyboard-aware-scroll-view';
 
 import styles from './styles';
 

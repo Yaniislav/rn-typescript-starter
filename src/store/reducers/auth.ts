@@ -1,4 +1,4 @@
-import { createReducer } from '@reduxjs/toolkit';
+import { createReducer, PayloadAction } from '@reduxjs/toolkit';
 
 import {
   didSignInAction,
@@ -8,7 +8,10 @@ import {
 } from '../actions';
 import { IAuthState } from 'interfaces/auth';
 
-const authanticateUser = (_: any, payload: IAuthState): IAuthState => ({
+const authanticateUser = (
+  _: any,
+  { payload }: PayloadAction<IAuthState>,
+): IAuthState => ({
   accessToken: payload.accessToken,
   refreshToken: payload.refreshToken,
 });
