@@ -1,5 +1,5 @@
-import { createStore, compose, applyMiddleware } from 'redux';
 import createSagaMiddleware from 'redux-saga';
+import { configureStore } from '@reduxjs/toolkit';
 
 import { persistStore, persistReducer } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
@@ -10,23 +10,19 @@ import rootSaga from './sagas';
 
 const sagaMiddleware = createSagaMiddleware();
 
-const composeEnhancers =
-  // eslint-disable-next-line dot-notation
-  (window['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'] as typeof compose) || compose;
-
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   stateReconciler: autoMergeLevel2,
-  blacklist: ['nav', 'form'],
   whitelist: ['auth'],
 };
 
-const persistedReducer = persistReducer(persistConfig, reducer);
+const persistedReducer = persistReducer<RootState>(persistConfig, reducer);
 
-const enhancer = composeEnhancers(applyMiddleware(sagaMiddleware));
-
-const store = createStore(persistedReducer, enhancer);
+const store = configureStore({
+  reducer: persistedReducer,
+  middleware: [sagaMiddleware],
+});
 
 sagaMiddleware.run(rootSaga);
 
