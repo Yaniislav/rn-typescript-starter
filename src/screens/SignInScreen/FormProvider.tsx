@@ -2,7 +2,7 @@ import React, { ReactChild } from 'react';
 import { Formik, FormikProps } from 'formik';
 import { object, string } from 'yup';
 
-import ISignInAction from 'store/actions/auth/ISignInAction';
+import { ISignInAction } from 'interfaces/auth';
 
 const SignInSchema = object().shape({
   email: string()
