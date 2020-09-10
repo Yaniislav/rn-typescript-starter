@@ -1,7 +1,7 @@
 import { put, call, select, all, takeLatest } from 'redux-saga/effects';
 import { signInAction, didSignInAction } from '../actions';
 import { get } from './api';
-import ISignInAction from '../actions/auth/ISignInAction';
+import { ISignInAction } from 'interfaces/auth';
 
 function* signInSaga({
   payload: { email },
