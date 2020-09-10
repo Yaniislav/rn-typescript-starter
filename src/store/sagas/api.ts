@@ -36,7 +36,7 @@ export function* put(
 ): Generator {
   try {
     const { result, tokens } = (yield call<PutSignatureType>(
-      api.get,
+      api.put,
       endpoint,
       params,
     )) as IReturnTypeFetch;
@@ -62,7 +62,7 @@ export function* post(
 ): Generator {
   try {
     const { result, tokens } = (yield call<PostSignatureType>(
-      api.get,
+      api.post,
       endpoint,
       body,
     )) as IReturnTypeFetch;

@@ -7,7 +7,7 @@ import FormProvider, { ISignInFormProps } from './FormProvider';
 import FormTextInput from 'components/FormTextInput';
 import DefaultText from 'components/DefaultText';
 import DefaultButton from 'components/DefaultButton';
-import ISignInAction from 'store/actions/auth/ISignInAction';
+import { ISignInAction } from 'interfaces/auth';
 import KeyboardAvoidingWrapper from 'components/KeyboardAvoidingWrapper';
 
 const SignIn: React.FunctionComponent<ISignInFormProps> = ({ onSubmit }) => {
