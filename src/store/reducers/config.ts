@@ -1,29 +1,22 @@
-import { createReducer } from 'redux-act';
+import { createReducer } from '@reduxjs/toolkit';
 import { didChangeLanguage, didLaunchApp } from '../actions';
+import { IConfigState } from 'interfaces/config';
 
-export interface IConfig {
-  language: string;
-  isFirstTimeLoaded: boolean;
-  wasLanguageChangedInApp: boolean;
-}
-
-const initialState: IConfig = {
+const initialState: IConfigState = {
   language: 'en',
   isFirstTimeLoaded: true,
   wasLanguageChangedInApp: false,
 };
 
-const configReducer = createReducer<IConfig>({}, initialState);
-
-configReducer.on(didChangeLanguage, (state, payload) => ({
-  ...state,
-  language: payload,
-  wasLanguageChangedInApp: true,
-}));
-
-configReducer.on(didLaunchApp, state => ({
-  ...state,
-  isFirstTimeLoaded: true,
-}));
+const configReducer = createReducer<IConfigState>(initialState, builder =>
+  builder
+    .addCase(didChangeLanguage, (state, { payload }) => {
+      state.language = payload;
+      state.wasLanguageChangedInApp = true;
+    })
+    .addCase(didLaunchApp, state => {
+      state.isFirstTimeLoaded = true;
+    }),
+);
 
 export default configReducer;
