@@ -4,14 +4,17 @@ import { Provider } from 'react-redux';
 
 import store, { persistor } from './store';
 import MainNavigator from 'navigation';
+import ErrorBoundary from 'components/ErrorBoundary';
 
 const App = (): ReactElement => {
   return (
-    <Provider store={store}>
-      <PersistGate persistor={persistor}>
-        <MainNavigator />
-      </PersistGate>
-    </Provider>
+    <ErrorBoundary>
+      <Provider store={store}>
+        <PersistGate persistor={persistor}>
+          <MainNavigator />
+        </PersistGate>
+      </Provider>
+    </ErrorBoundary>
   );
 };
 
