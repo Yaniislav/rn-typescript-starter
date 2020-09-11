@@ -55,7 +55,7 @@ const fetchAsync = async (
   return result;
 };
 
-const makeRequestWithBody = async (
+export const makeRequestWithBody = async (
   endpoint: string,
   body: Record<string, string>,
   method: string,
