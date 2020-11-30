@@ -1,42 +1,60 @@
-import React, { FC, useMemo, Ref, forwardRef } from 'react';
-import { View, TextInputProperties, TextInput } from 'react-native';
+import React, { FC, Ref, forwardRef, useCallback } from 'react';
+import { View, TextInput, TextInputProps } from 'react-native';
+import {
+  Control,
+  Controller,
+  ControllerRenderProps,
+  FieldError,
+} from 'react-hook-form';
 
 import DefaultTextInput from 'components/DefaultTextInput';
 import DefaultText from 'components/DefaultText';
-
 import styles from './styles';
 
-interface IProps extends TextInputProperties {
-  error?: string;
-  touched?: boolean;
+interface IProps extends Partial<TextInputProps> {
+  error?: FieldError;
+  control: Control;
+  name: string;
 }
 
 const FormTextInput: FC<IProps> = (
-  { error, touched, ...rest }: IProps,
+  { error, control, name, ...rest }: IProps,
   ref: Ref<TextInput>,
 ) => {
-  const Error = useMemo(() => {
-    if (error && touched) {
+  const renderError = useCallback(() => {
+    if (error) {
       return (
         <View style={styles.errorContainer}>
           <DefaultText size="small" type="error">
-            {error}
+            {error?.message || ''}
           </DefaultText>
         </View>
       );
     }
 
     return null;
-  }, [error, touched]);
+  }, [error]);
 
-  return (
-    <View style={styles.container}>
-      <View style={styles.textInputContainer}>
-        <DefaultTextInput {...rest} style={styles.inputStyle} ref={ref} />
+  const renderComponent = useCallback(
+    ({ onChange, onBlur, value }: ControllerRenderProps) => (
+      <View style={styles.container}>
+        <View style={styles.textInputContainer}>
+          <DefaultTextInput
+            style={styles.inputStyle}
+            ref={ref}
+            onChangeText={value => onChange(value)}
+            onBlur={onBlur}
+            value={value}
+            {...rest}
+          />
+        </View>
+        {renderError()}
       </View>
-      {Error}
-    </View>
+    ),
+    [ref, renderError, rest],
   );
+
+  return <Controller control={control} render={renderComponent} name={name} />;
 };
 
 export default forwardRef(FormTextInput);
