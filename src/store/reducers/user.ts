@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { IUserState } from 'interfaces/user';
+import { IUserState } from 'interfaces/reducers/user';
 import { didSignInAction } from 'store/actions';
 
 const initialState: IUserState = {

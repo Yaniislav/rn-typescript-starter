@@ -11,14 +11,14 @@ import DefaultTextInput from 'components/DefaultTextInput';
 import DefaultText from 'components/DefaultText';
 import styles from './styles';
 
-interface IProps extends Partial<TextInputProps> {
+export interface IFormTextInputProps extends Partial<TextInputProps> {
   error?: FieldError;
   control: Control;
   name: string;
 }
 
-const FormTextInput: FC<IProps> = (
-  { error, control, name, ...rest }: IProps,
+const FormTextInput: FC<IFormTextInputProps> = (
+  { error, control, name, ...rest }: IFormTextInputProps,
   ref: Ref<TextInput>,
 ) => {
   const renderError = useCallback(() => {

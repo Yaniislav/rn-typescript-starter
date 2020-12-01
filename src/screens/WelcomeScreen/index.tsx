@@ -6,15 +6,16 @@ import { StackParamList } from 'navigation';
 import DefaultText from 'components/DefaultText';
 import DefaultButton from 'components/DefaultButton';
 import styles from './styles';
+import Routes from '../../navigation/routes';
 
 export type WelcomeScreenProps = {
-  navigation: StackNavigationProp<StackParamList, 'Welcome'>;
-  route: RouteProp<StackParamList, 'Welcome'>;
+  navigation: StackNavigationProp<StackParamList, Routes.Welcome>;
+  route: RouteProp<StackParamList, Routes.Welcome>;
 };
 
 const WelcomeScreen = ({ navigation }: WelcomeScreenProps): ReactElement => {
   const onSignInPress = useCallback(() => {
-    navigation.push('SignIn');
+    navigation.push(Routes.SignIn);
   }, [navigation]);
 
   return (

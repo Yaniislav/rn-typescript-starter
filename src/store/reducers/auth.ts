@@ -6,7 +6,7 @@ import {
   didUpdateTokensAction,
   signOutAction,
 } from '../actions';
-import { IAuthState } from 'interfaces/auth';
+import { IAuthState } from 'interfaces/reducers/auth';
 
 const authanticateUser = (
   _: any,

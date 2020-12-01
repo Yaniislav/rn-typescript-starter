@@ -4,12 +4,13 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 
-import FormTextInput from 'components/FormTextInput';
 import DefaultText from 'components/DefaultText';
 import DefaultButton from 'components/DefaultButton';
-import { ISignInAction } from 'interfaces/auth';
+import { ISignInAction } from 'interfaces/actions/auth';
 import KeyboardAvoidingWrapper from 'components/KeyboardAvoidingWrapper';
 import styles from './styles';
+import FormEmailInput from '../../components/FormComponents/FormEmailInput';
+import FormPasswordInput from '../../components/FormComponents/FormPasswordInput';
 
 type ISignInForm = ISignInAction;
 
@@ -48,21 +49,15 @@ const SignIn: React.FC<IProps> = ({ onSubmit }: IProps) => {
       <DefaultText style={styles.title} size="large">
         Sign In
       </DefaultText>
-      <FormTextInput
-        placeholder="Email"
+      <FormEmailInput
         error={errors.email}
-        keyboardType="email-address"
-        returnKeyType="next"
         onSubmitEditing={onEmailNextPress}
         control={control}
         name={'email'}
       />
-      <FormTextInput
-        secureTextEntry
-        placeholder="Password"
+      <FormPasswordInput
         error={errors.password}
         control={control}
-        returnKeyType="done"
         ref={passwordRef}
         name={'password'}
       />

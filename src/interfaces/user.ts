@@ -3,6 +3,3 @@ export interface IUser {
   lastName: string;
   email: string;
 }
-
-// reducer
-export type IUserState = IUser;

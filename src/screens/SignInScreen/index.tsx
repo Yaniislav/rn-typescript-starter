@@ -1,7 +1,7 @@
 import React, { ReactElement, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 
-import { ISignInAction } from 'interfaces/auth';
+import { ISignInAction } from 'interfaces/actions/auth';
 import { signInAction } from 'store/actions';
 import SignIn from './SignIn';
 
