@@ -30,7 +30,7 @@ const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   stateReconciler: autoMergeLevel2,
-  whitelist: ['auth'],
+  blacklist: ['auth'],
 };
 
 const persistedReducer = persistReducer<RootState>(persistConfig, reducer);
