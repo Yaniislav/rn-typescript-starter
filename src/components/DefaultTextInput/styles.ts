@@ -1,5 +1,5 @@
 import { StyleSheet, TextStyle } from 'react-native';
-import { scale } from 'react-native-size-matters';
+import { Fonts, Colors } from 'theme';
 
 interface IStyles {
   fontStyle: TextStyle;
@@ -7,8 +7,9 @@ interface IStyles {
 
 const styles = StyleSheet.create<IStyles>({
   fontStyle: {
-    fontSize: scale(14),
-    color: 'black',
+    fontFamily: Fonts.primary.base,
+    fontSize: Fonts.sizes.base,
+    color: Colors.text,
   },
 });
 

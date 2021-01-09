@@ -1,5 +1,6 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
-import { scale, verticalScale } from 'react-native-size-matters';
+import { scale } from 'react-native-size-matters';
+import { Colors, Metrics } from 'theme';
 
 interface IStyles {
   container: ViewStyle;
@@ -11,26 +12,26 @@ interface IStyles {
 
 const styles = StyleSheet.create<IStyles>({
   container: {
-    backgroundColor: 'green',
-    height: verticalScale(48),
-    width: scale(230),
+    backgroundColor: Colors.green,
+    height: Metrics.buttonHeight,
+    width: Metrics.buttonWidth,
     borderRadius: scale(5),
     justifyContent: 'center',
     alignItems: 'center',
   },
   outline: {
     backgroundColor: 'transparent',
-    borderColor: 'green',
-    borderWidth: scale(3),
+    borderColor: Colors.buttonBorder,
+    borderWidth: Metrics.buttonBorder,
   },
   slimContures: {
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: Metrics.slimBorder,
   },
   disabledButton: {
-    borderColor: 'gray',
+    borderColor: Colors.gray,
   },
   disabledTitle: {
-    color: 'gray',
+    color: Colors.gray,
   },
 });
 

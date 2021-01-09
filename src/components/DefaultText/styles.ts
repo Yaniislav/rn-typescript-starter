@@ -1,5 +1,5 @@
 import { StyleSheet, TextStyle } from 'react-native';
-import { scale } from 'react-native-size-matters';
+import { Fonts, Colors } from '../../theme';
 
 interface IStyles {
   text: TextStyle;
@@ -12,24 +12,24 @@ interface IStyles {
 
 const styles = StyleSheet.create<IStyles>({
   text: {
-    fontFamily: 'Helvetica',
+    fontFamily: Fonts.primary.base,
     fontWeight: '400',
-    fontSize: scale(17),
+    fontSize: Fonts.sizes.base,
   },
   small: {
-    fontSize: scale(14),
+    fontSize: Fonts.sizes.small,
   },
   medium: {
-    fontSize: scale(17),
+    fontSize: Fonts.sizes.base,
   },
   large: {
-    fontSize: scale(24),
+    fontSize: Fonts.sizes.large,
   },
   center: {
     textAlign: 'center',
   },
   errorType: {
-    color: 'red',
+    color: Colors.errorText,
   },
 });
 

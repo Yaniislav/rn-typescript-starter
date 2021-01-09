@@ -4,24 +4,41 @@ import { configureStore } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
 import AsyncStorage from '@react-native-community/async-storage';
+import Reactotron from 'configs/ReactotronConfig';
 
 import reducer from './reducers';
 import rootSaga from './sagas';
 
-const sagaMiddleware = createSagaMiddleware();
+const middlewares: any[] = [];
+const enhancers = [];
+let sagaMiddleware;
+
+if (Reactotron.createSagaMonitor && __DEV__) {
+  const sagaMonitor = Reactotron.createSagaMonitor();
+  sagaMiddleware = createSagaMiddleware({ sagaMonitor });
+} else {
+  sagaMiddleware = createSagaMiddleware();
+}
+
+if (__DEV__ && Reactotron.createEnhancer) {
+  enhancers.push(Reactotron.createEnhancer());
+}
+
+middlewares.push(sagaMiddleware);
 
 const persistConfig = {
   key: 'root',
   storage: AsyncStorage,
   stateReconciler: autoMergeLevel2,
-  whitelist: ['auth'],
+  blacklist: ['auth'],
 };
 
 const persistedReducer = persistReducer<RootState>(persistConfig, reducer);
 
 const store = configureStore({
   reducer: persistedReducer,
-  middleware: [sagaMiddleware],
+  middleware: middlewares,
+  enhancers,
 });
 
 sagaMiddleware.run(rootSaga);

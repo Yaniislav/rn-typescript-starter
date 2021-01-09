@@ -3,8 +3,7 @@ import {
   KeyboardAwareScrollView,
   KeyboardAwareScrollViewProps,
 } from 'react-native-keyboard-aware-scroll-view';
-
-import styles from './styles';
+import { Styles } from 'theme';
 
 interface IProps extends KeyboardAwareScrollViewProps {
   children: ReactNode;
@@ -12,7 +11,7 @@ interface IProps extends KeyboardAwareScrollViewProps {
 
 const KeyboardAvoidingWrapper: FC<IProps> = ({ children, ...rest }: IProps) => (
   <KeyboardAwareScrollView
-    contentContainerStyle={styles.container}
+    contentContainerStyle={Styles.flex1}
     resetScrollToCoords={{ x: 0, y: 0 }}
     keyboardShouldPersistTaps={'handled'}
     {...rest}>

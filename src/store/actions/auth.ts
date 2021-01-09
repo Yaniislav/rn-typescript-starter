@@ -3,15 +3,17 @@ import { createAction } from '@reduxjs/toolkit';
 import {
   ISignUpAction,
   IDidSignInAction,
-  IDidUpdateTokenAction,
+  ITokenAction,
   ISignInAction,
-} from 'interfaces/auth';
+} from 'interfaces/actions/auth';
 
 export const signInAction = createAction<ISignInAction>('signIn');
-export const signUpAction = createAction<ISignUpAction>('signUp');
-export const signOutAction = createAction('signOut');
 export const didSignInAction = createAction<IDidSignInAction>('didSignIn');
+
+export const signUpAction = createAction<ISignUpAction>('signUp');
 export const didSignUpAction = createAction<IDidSignInAction>('didSignUp');
-export const didUpdateTokensAction = createAction<IDidUpdateTokenAction>(
+
+export const signOutAction = createAction('signOut');
+export const didUpdateTokensAction = createAction<ITokenAction>(
   'didUpdateTokens',
 );

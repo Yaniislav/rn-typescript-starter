@@ -9,11 +9,12 @@ import HomeScreen from 'screens/HomeScreen';
 
 import { userLoggedInSelector } from 'store/selectors';
 import { navigationRef } from './RootNavigation';
+import Routes from './routes';
 
 export type StackParamList = {
-  Welcome: undefined;
-  SignIn: undefined;
-  Home: undefined;
+  [Routes.Welcome]: undefined;
+  [Routes.SignIn]: undefined;
+  [Routes.Home]: undefined;
 };
 
 const unAuthScreensConfiguration = {
@@ -31,11 +32,11 @@ export default function MainNavigator(): ReactElement {
         <>
           <Stack.Screen
             options={unAuthScreensConfiguration}
-            name={'Welcome'}
+            name={Routes.Welcome}
             component={WelcomeScreen}
           />
           <Stack.Screen
-            name={'SignIn'}
+            name={Routes.SignIn}
             options={unAuthScreensConfiguration}
             component={SignInScreen}
           />
@@ -43,7 +44,7 @@ export default function MainNavigator(): ReactElement {
       );
     }
 
-    return <Stack.Screen name={'Home'} component={HomeScreen} />;
+    return <Stack.Screen name={Routes.Home} component={HomeScreen} />;
   }, [isLoggedIn]);
 
   return (
