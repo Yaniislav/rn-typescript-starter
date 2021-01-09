@@ -1,5 +1,6 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
 import { scale } from 'react-native-size-matters';
+import { Metrics } from 'theme';
 
 interface IStyle {
   container: ViewStyle;
@@ -8,29 +9,31 @@ interface IStyle {
   errorContainer: ViewStyle;
 }
 
+const ERROR_CONTAINER_HEIGHT = scale(15);
+
 const styles = StyleSheet.create<IStyle>({
   container: {
     alignSelf: 'stretch',
-    height: scale(65),
+    height: Metrics.baseInputHeight,
     alignItems: 'stretch',
-    marginBottom: scale(15),
+    marginBottom: Metrics.spacingVerticalMedium,
   },
   textInputContainer: {
     borderColor: '#ccc',
-    borderWidth: StyleSheet.hairlineWidth,
+    borderWidth: Metrics.slimBorder,
     borderRadius: scale(10),
     alignItems: 'stretch',
-    marginBottom: scale(5),
+    marginBottom: Metrics.spacingVerticalSmall / 2,
     justifyContent: 'center',
-    paddingHorizontal: scale(10),
+    paddingHorizontal: Metrics.spacingHorizontalSmall,
     height: scale(50),
   },
   inputStyle: {
     flex: 1,
   },
   errorContainer: {
-    height: scale(15),
-    paddingHorizontal: scale(10),
+    height: Metrics.baseInputHeight - ERROR_CONTAINER_HEIGHT,
+    paddingHorizontal: Metrics.spacingHorizontalSmall,
   },
 });
 

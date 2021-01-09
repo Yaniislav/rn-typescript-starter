@@ -1,5 +1,5 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
-import { scale } from 'react-native-size-matters';
+import { Colors, Metrics } from 'theme';
 
 interface IStyles {
   container: ViewStyle;
@@ -12,12 +12,13 @@ const styles = StyleSheet.create<IStyles>({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: Colors.background,
   },
   title: {
-    marginBottom: scale(30),
+    marginBottom: Metrics.spacingVerticalLarge,
   },
   signUpButton: {
-    marginTop: scale(15),
+    marginTop: Metrics.spacingHorizontalMedium,
   },
 });
 

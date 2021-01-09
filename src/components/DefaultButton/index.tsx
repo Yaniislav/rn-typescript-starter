@@ -1,23 +1,25 @@
 import React, { useMemo, FC } from 'react';
-import { View, Pressable, PressableProps } from 'react-native';
+import { Pressable, PressableProps, ViewStyle } from 'react-native';
 import DefaultText from 'components/DefaultText';
 
 import styles from './styles';
 
 interface IProps extends PressableProps {
   title: string;
-  type?: 'fullfill' | 'outline';
+  type?: 'fulfill' | 'outline';
   disabled?: boolean;
+  style?: ViewStyle;
 }
 
 const DefaultButton: FC<IProps> = ({
   title,
   type,
   disabled,
+  style,
   ...rest
 }: IProps) => {
   const containerStyles = useMemo(() => {
-    const stylesArray = [styles.container];
+    const stylesArray: Array<ViewStyle | undefined> = [styles.container];
 
     if (type === 'outline') {
       stylesArray.push(styles.outline);
@@ -26,14 +28,15 @@ const DefaultButton: FC<IProps> = ({
     if (disabled) {
       stylesArray.push(styles.disabledButton);
     }
+
+    stylesArray.push(style);
+
     return stylesArray;
-  }, [type, disabled]);
+  }, [type, disabled, style]);
 
   return (
-    <Pressable {...rest}>
-      <View style={containerStyles}>
-        <DefaultText>{title}</DefaultText>
-      </View>
+    <Pressable {...rest} style={containerStyles}>
+      <DefaultText>{title}</DefaultText>
     </Pressable>
   );
 };

@@ -1,9 +1,9 @@
 import React, { FC, useMemo } from 'react';
-import { Text, StyleProp, TextStyle, TextProperties } from 'react-native';
+import { Text, StyleProp, TextStyle, TextProps } from 'react-native';
 
 import styles from './styles';
 
-interface IProps extends TextProperties {
+interface IProps extends TextProps {
   size?: 'small' | 'medium' | 'large';
   style?: StyleProp<TextStyle>;
   center?: boolean;

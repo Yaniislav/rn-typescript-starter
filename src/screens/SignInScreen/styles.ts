@@ -1,5 +1,5 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
-import { scale } from 'react-native-size-matters';
+import { Metrics } from 'theme';
 
 interface IStyles {
   container: ViewStyle;
@@ -9,13 +9,13 @@ interface IStyles {
 const styles = StyleSheet.create<IStyles>({
   container: {
     flex: 1,
-    paddingTop: scale(20),
-    paddingHorizontal: scale(20),
+    paddingTop: Metrics.spacingHorizontalLarge,
+    paddingHorizontal: Metrics.spacingHorizontalLarge,
     alignItems: 'center',
     justifyContent: 'center',
   },
   title: {
-    marginBottom: scale(10),
+    marginBottom: Metrics.spacingVerticalSmall,
   },
 });
 
