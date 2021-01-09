@@ -772,7 +772,7 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hookform/resolvers@^1.1.0":
+"@hookform/resolvers@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.1.0.tgz#ed4446be33cd7c419ab0416451682051ae1e3a6e"
   integrity sha512-rzhWRu6s6CEpWXuxWsbJJmuJCpc10AAK+NpQ4LeVJbl7ShE9r0ODMv043KZ7Dvg4PmdTgQg6v6C2rKKhv9wm+g==
@@ -6009,6 +6009,11 @@ react-native-screens@2.0.0-beta.2:
   dependencies:
     debounce "^1.2.0"
 
+react-native-sensitive-info@^6.0.0-alpha.9:
+  version "6.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/react-native-sensitive-info/-/react-native-sensitive-info-6.0.0-alpha.9.tgz#b488fab715d36efdf80b377a21545cfe888ab8d2"
+  integrity sha512-W2R1gUHgBAmy+wVl0BvA7s01SqqTitnG4Sdj2zmck0OS5a54kq+pTnXRqDljMa2NQs4Mue2IHyvd+Tf0X1ZL6Q==
+
 react-native-size-matters@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.3.0.tgz#0692e324a189884819b570c4cab24d27ecd4311d"
@@ -6060,7 +6065,7 @@ react-native@0.63.2:
     use-subscription "^1.0.0"
     whatwg-fetch "^3.0.0"
 
-react-query@^2.15.4:
+react-query@2.15.4:
   version "2.15.4"
   resolved "https://registry.yarnpkg.com/react-query/-/react-query-2.15.4.tgz#0447510fc30aebba5a4b99879ec4b7155d9b3f20"
   integrity sha512-gEF2Ebe1MtiyLKEaVEIlRMl6rwvP/RVwP+Xf68vhXDfD91IeZkkW7plRjoaHa0/NeUPM1AgTHb1Z7NtqaYDXjA==
