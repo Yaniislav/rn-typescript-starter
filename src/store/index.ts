@@ -13,7 +13,7 @@ const middlewares: any[] = [];
 const enhancers = [];
 let sagaMiddleware;
 
-if (Reactotron.createSagaMonitor && __DEV__) {
+if (__DEV__ && Reactotron.createSagaMonitor) {
   const sagaMonitor = Reactotron.createSagaMonitor();
   sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 } else {
