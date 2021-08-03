@@ -9,10 +9,15 @@ interface IProps extends KeyboardAwareScrollViewProps {
   children: ReactNode;
 }
 
+const resetScrollToCoords = {
+  x: 0,
+  y: 0,
+};
+
 const KeyboardAvoidingWrapper: FC<IProps> = ({ children, ...rest }: IProps) => (
   <KeyboardAwareScrollView
     contentContainerStyle={Styles.flex1}
-    resetScrollToCoords={{ x: 0, y: 0 }}
+    resetScrollToCoords={resetScrollToCoords}
     keyboardShouldPersistTaps={'handled'}
     {...rest}>
     {children}

@@ -18,8 +18,6 @@
 		2DCD954D1E0B4F2C00145EB5 /* lezzooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* lezzooTests.m */; };
 		4CC0ED7F4EF38F61457C748B /* libPods-lezzoo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDE09E2F99D4E55BA6A71A1 /* libPods-lezzoo.a */; };
 		7A7518998625500E4F72E96A /* libPods-lezzoo-lezzooTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D6899DBED52278FF1DFB6605 /* libPods-lezzoo-lezzooTests.a */; };
-		A3A4A7470BCC4D1D98008D82 /* libPods-lezzoo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E0DE2A18DF307257352AEE /* libPods-lezzoo-tvOS.a */; };
-		F0F9FA5FE19BEE2DA24C4F62 /* libPods-lezzoo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4E3953B58920CF8B15E253D /* libPods-lezzoo-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,10 +42,8 @@
 		00E356EE1AD99517003FC87E /* lezzooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lezzooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* lezzooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = lezzooTests.m; sourceTree = "<group>"; };
-		071B54EDABF895B0362E8543 /* Pods-lezzoo-tvOS.dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.dev.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.dev.release.xcconfig"; sourceTree = "<group>"; };
 		0CC1862BF1C718C4565E2BC1 /* Pods-lezzoo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.debug.xcconfig"; sourceTree = "<group>"; };
 		0F7A02661E5ABDC527E9D6D6 /* Pods-lezzoo.staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.staging.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.staging.debug.xcconfig"; sourceTree = "<group>"; };
-		12AED8914A499B409F548D5B /* Pods-lezzoo-tvOSTests.dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.dev.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.dev.release.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* lezzoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lezzoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = lezzoo/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = lezzoo/AppDelegate.m; sourceTree = "<group>"; };
@@ -55,51 +51,35 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = lezzoo/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = lezzoo/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = lezzoo/main.m; sourceTree = "<group>"; };
-		1A043D260EC75A5D4B9AD1A0 /* Pods-lezzoo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		1B7A3D5487A9414553858FBA /* Pods-lezzooTests.dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.dev.debug.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.dev.debug.xcconfig"; sourceTree = "<group>"; };
 		24B529B1AFD9C42CFFA09A63 /* Pods-lezzooTests.staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.staging.debug.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.staging.debug.xcconfig"; sourceTree = "<group>"; };
 		258CD043CCDABE7D15A9F301 /* Pods-lezzooTests.dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.dev.release.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.dev.release.xcconfig"; sourceTree = "<group>"; };
-		2807F3AEEF1108F7F6C0E1DF /* Pods-lezzoo-tvOS.prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.prod.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.prod.debug.xcconfig"; sourceTree = "<group>"; };
 		2B47357B2E83A4BECF746E35 /* Pods-lezzoo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.release.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* lezzoo-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lezzoo-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* lezzoo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "lezzoo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3269DA32EF8C5219BF79BB7F /* Pods-lezzoo.prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.prod.release.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.prod.release.xcconfig"; sourceTree = "<group>"; };
 		32D341A79811A675D7E20D2B /* Pods-lezzoo-lezzooTests.prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.prod.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.prod.debug.xcconfig"; sourceTree = "<group>"; };
-		395319A3B3BAE53E482BF93A /* Pods-lezzoo-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		3FDE09E2F99D4E55BA6A71A1 /* libPods-lezzoo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lezzoo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5895ABB3A6367A1B2CC58D3B /* Pods-lezzoo-lezzooTests.staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.staging.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.staging.debug.xcconfig"; sourceTree = "<group>"; };
-		597095BF6DBB352307B8D7F5 /* Pods-lezzoo-tvOS.prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.prod.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.prod.release.xcconfig"; sourceTree = "<group>"; };
 		5C6FF8469BEF945B354C39D4 /* Pods-lezzooTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.release.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.release.xcconfig"; sourceTree = "<group>"; };
 		65F8738176A22CE0C065AB5B /* Pods-lezzooTests.staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.staging.release.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.staging.release.xcconfig"; sourceTree = "<group>"; };
-		6768B97D9BD9ABF0B1C26BF4 /* Pods-lezzoo-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		677A147A16437CA267D239FC /* Pods-lezzoo.staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.staging.release.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.staging.release.xcconfig"; sourceTree = "<group>"; };
-		72ECD56457AD078E8767B575 /* Pods-lezzoo-tvOSTests.dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.dev.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.dev.debug.xcconfig"; sourceTree = "<group>"; };
-		7F6D5D0647158DF3F4AA4FFA /* Pods-lezzoo-tvOS.dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.dev.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.dev.debug.xcconfig"; sourceTree = "<group>"; };
 		847EF635242F98510073F98C /* lezzoo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "lezzoo-Bridging-Header.h"; sourceTree = "<group>"; };
 		888B89CEFC63970694ECAA84 /* Pods-lezzoo-lezzooTests.staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.staging.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.staging.release.xcconfig"; sourceTree = "<group>"; };
-		88E0DE2A18DF307257352AEE /* libPods-lezzoo-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lezzoo-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9040798A4095D210ACB07E9B /* Pods-lezzoo-tvOS.staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.staging.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.staging.debug.xcconfig"; sourceTree = "<group>"; };
 		91FFEA3FC5E6E7A7A2AF2964 /* Pods-lezzoo-lezzooTests.dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.dev.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.dev.debug.xcconfig"; sourceTree = "<group>"; };
-		962C994C999EABA10A203A26 /* Pods-lezzoo-tvOSTests.staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.staging.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.staging.release.xcconfig"; sourceTree = "<group>"; };
 		AF1406A1AA33D00E92E2476F /* Pods-lezzoo.prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.prod.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.prod.debug.xcconfig"; sourceTree = "<group>"; };
-		B4E3953B58920CF8B15E253D /* libPods-lezzoo-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lezzoo-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8259A4041AA7A0198D77936 /* Pods-lezzooTests.prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.prod.debug.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.prod.debug.xcconfig"; sourceTree = "<group>"; };
 		D2BF89AB536989CF1A9CB20E /* Pods-lezzoo.dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.dev.release.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.dev.release.xcconfig"; sourceTree = "<group>"; };
-		D3A20A0511C73BCEC9975D0C /* Pods-lezzoo-tvOSTests.prod.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.prod.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.prod.debug.xcconfig"; sourceTree = "<group>"; };
 		D61DC3DBDA3BC2D1361EECCD /* Pods-lezzoo.dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo.dev.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo/Pods-lezzoo.dev.debug.xcconfig"; sourceTree = "<group>"; };
 		D6899DBED52278FF1DFB6605 /* libPods-lezzoo-lezzooTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lezzoo-lezzooTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7FA2DF299E7C540479F219D /* Pods-lezzoo-tvOSTests.prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.prod.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.prod.release.xcconfig"; sourceTree = "<group>"; };
 		D8AD6F98B770E4FCEE335405 /* Pods-lezzoo-lezzooTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.release.xcconfig"; sourceTree = "<group>"; };
 		DE0C04CB5E2D67220BD3F8C6 /* Pods-lezzoo-lezzooTests.dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.dev.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.dev.release.xcconfig"; sourceTree = "<group>"; };
 		DE9FFA27E847AE8E8764E646 /* Pods-lezzoo-lezzooTests.prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.prod.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.prod.release.xcconfig"; sourceTree = "<group>"; };
 		E299884E4FF4DD4FDDC5A375 /* Pods-lezzoo-lezzooTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-lezzooTests.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E609EDBD0AF1AB6DAA69B336 /* Pods-lezzoo-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		EAA2A8CBDD8CE946EBB665B6 /* Pods-lezzooTests.prod.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.prod.release.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.prod.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F42EDD5C0A473954A9665845 /* Pods-lezzoo-tvOSTests.staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOSTests.staging.debug.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOSTests/Pods-lezzoo-tvOSTests.staging.debug.xcconfig"; sourceTree = "<group>"; };
 		F7F4F0476947D1290A5F175B /* Pods-lezzooTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzooTests.debug.xcconfig"; path = "Target Support Files/Pods-lezzooTests/Pods-lezzooTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FAE366D264FDF07C3CF41ECD /* Pods-lezzoo-tvOS.staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lezzoo-tvOS.staging.release.xcconfig"; path = "Target Support Files/Pods-lezzoo-tvOS/Pods-lezzoo-tvOS.staging.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3A4A7470BCC4D1D98008D82 /* libPods-lezzoo-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +110,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0F9FA5FE19BEE2DA24C4F62 /* libPods-lezzoo-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -160,10 +138,6 @@
 			children = (
 				0CC1862BF1C718C4565E2BC1 /* Pods-lezzoo.debug.xcconfig */,
 				2B47357B2E83A4BECF746E35 /* Pods-lezzoo.release.xcconfig */,
-				E609EDBD0AF1AB6DAA69B336 /* Pods-lezzoo-tvOS.debug.xcconfig */,
-				395319A3B3BAE53E482BF93A /* Pods-lezzoo-tvOS.release.xcconfig */,
-				6768B97D9BD9ABF0B1C26BF4 /* Pods-lezzoo-tvOSTests.debug.xcconfig */,
-				1A043D260EC75A5D4B9AD1A0 /* Pods-lezzoo-tvOSTests.release.xcconfig */,
 				F7F4F0476947D1290A5F175B /* Pods-lezzooTests.debug.xcconfig */,
 				5C6FF8469BEF945B354C39D4 /* Pods-lezzooTests.release.xcconfig */,
 				AF1406A1AA33D00E92E2476F /* Pods-lezzoo.prod.debug.xcconfig */,
@@ -172,18 +146,6 @@
 				3269DA32EF8C5219BF79BB7F /* Pods-lezzoo.prod.release.xcconfig */,
 				677A147A16437CA267D239FC /* Pods-lezzoo.staging.release.xcconfig */,
 				D2BF89AB536989CF1A9CB20E /* Pods-lezzoo.dev.release.xcconfig */,
-				2807F3AEEF1108F7F6C0E1DF /* Pods-lezzoo-tvOS.prod.debug.xcconfig */,
-				7F6D5D0647158DF3F4AA4FFA /* Pods-lezzoo-tvOS.dev.debug.xcconfig */,
-				9040798A4095D210ACB07E9B /* Pods-lezzoo-tvOS.staging.debug.xcconfig */,
-				597095BF6DBB352307B8D7F5 /* Pods-lezzoo-tvOS.prod.release.xcconfig */,
-				FAE366D264FDF07C3CF41ECD /* Pods-lezzoo-tvOS.staging.release.xcconfig */,
-				071B54EDABF895B0362E8543 /* Pods-lezzoo-tvOS.dev.release.xcconfig */,
-				D3A20A0511C73BCEC9975D0C /* Pods-lezzoo-tvOSTests.prod.debug.xcconfig */,
-				72ECD56457AD078E8767B575 /* Pods-lezzoo-tvOSTests.dev.debug.xcconfig */,
-				F42EDD5C0A473954A9665845 /* Pods-lezzoo-tvOSTests.staging.debug.xcconfig */,
-				D7FA2DF299E7C540479F219D /* Pods-lezzoo-tvOSTests.prod.release.xcconfig */,
-				962C994C999EABA10A203A26 /* Pods-lezzoo-tvOSTests.staging.release.xcconfig */,
-				12AED8914A499B409F548D5B /* Pods-lezzoo-tvOSTests.dev.release.xcconfig */,
 				C8259A4041AA7A0198D77936 /* Pods-lezzooTests.prod.debug.xcconfig */,
 				1B7A3D5487A9414553858FBA /* Pods-lezzooTests.dev.debug.xcconfig */,
 				24B529B1AFD9C42CFFA09A63 /* Pods-lezzooTests.staging.debug.xcconfig */,
@@ -223,8 +185,6 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				3FDE09E2F99D4E55BA6A71A1 /* libPods-lezzoo.a */,
-				88E0DE2A18DF307257352AEE /* libPods-lezzoo-tvOS.a */,
-				B4E3953B58920CF8B15E253D /* libPods-lezzoo-tvOSTests.a */,
 				D6899DBED52278FF1DFB6605 /* libPods-lezzoo-lezzooTests.a */,
 			);
 			name = Frameworks;
@@ -275,6 +235,7 @@
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
 				6ADADB33A4550BE4B21E0507 /* [CP] Copy Pods Resources */,
+				5CEDAA2C512999A7C9567F87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +258,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				713071D1549C55116B6B165D /* [CP] Copy Pods Resources */,
+				F92D88D51611118D7DA3A881 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,7 +273,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "lezzoo-tvOS" */;
 			buildPhases = (
-				1530592784029F2E6B389500 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -331,7 +292,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "lezzoo-tvOSTests" */;
 			buildPhases = (
-				F6DADF84B103382F47AD6DFB /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -444,28 +404,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export DEVELOPMENT_BUILD_CONFIGURATIONS=\"+(Dev.Debug|Staging.Debug|Prod.Debug|Debug)\"\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		1530592784029F2E6B389500 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-lezzoo-tvOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		16D7395FB55A51A846B51F91 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -501,6 +439,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		5CEDAA2C512999A7C9567F87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lezzoo-lezzooTests/Pods-lezzoo-lezzooTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		6ADADB33A4550BE4B21E0507 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -560,26 +516,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6DADF84B103382F47AD6DFB /* [CP] Check Pods Manifest.lock */ = {
+		F92D88D51611118D7DA3A881 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-lezzoo/Pods-lezzoo-frameworks.sh",
+				"${PODS_XCFRAMEWORKS_BUILD_DIR}/OpenSSL/OpenSSL.framework/OpenSSL",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-lezzoo-tvOSTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OpenSSL.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-lezzoo/Pods-lezzoo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -782,7 +734,6 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E609EDBD0AF1AB6DAA69B336 /* Pods-lezzoo-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -810,7 +761,6 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 395319A3B3BAE53E482BF93A /* Pods-lezzoo-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -838,7 +788,6 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6768B97D9BD9ABF0B1C26BF4 /* Pods-lezzoo-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -865,7 +814,6 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1A043D260EC75A5D4B9AD1A0 /* Pods-lezzoo-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -921,6 +869,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -981,6 +930,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1033,6 +983,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1109,7 +1060,6 @@
 		};
 		8497DC0F23FC22F300D150B4 /* Staging.Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9040798A4095D210ACB07E9B /* Pods-lezzoo-tvOS.staging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1137,7 +1087,6 @@
 		};
 		8497DC1023FC22F300D150B4 /* Staging.Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F42EDD5C0A473954A9665845 /* Pods-lezzoo-tvOSTests.staging.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1193,6 +1142,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1269,7 +1219,6 @@
 		};
 		8497DC1923FC23F700D150B4 /* Dev.Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7F6D5D0647158DF3F4AA4FFA /* Pods-lezzoo-tvOS.dev.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1297,7 +1246,6 @@
 		};
 		8497DC1A23FC23F700D150B4 /* Dev.Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72ECD56457AD078E8767B575 /* Pods-lezzoo-tvOSTests.dev.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1353,6 +1301,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1417,7 +1366,6 @@
 		};
 		8497DC2323FC2ED400D150B4 /* Dev.Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 071B54EDABF895B0362E8543 /* Pods-lezzoo-tvOS.dev.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1445,7 +1393,6 @@
 		};
 		8497DC2423FC2ED400D150B4 /* Dev.Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12AED8914A499B409F548D5B /* Pods-lezzoo-tvOSTests.dev.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1501,6 +1448,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1565,7 +1513,6 @@
 		};
 		8497DC2823FC2EEF00D150B4 /* Staging.Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FAE366D264FDF07C3CF41ECD /* Pods-lezzoo-tvOS.staging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1593,7 +1540,6 @@
 		};
 		8497DC2923FC2EEF00D150B4 /* Staging.Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 962C994C999EABA10A203A26 /* Pods-lezzoo-tvOSTests.staging.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1649,6 +1595,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1725,7 +1672,6 @@
 		};
 		8497DC2D23FC2F0700D150B4 /* Prod.Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2807F3AEEF1108F7F6C0E1DF /* Pods-lezzoo-tvOS.prod.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1753,7 +1699,6 @@
 		};
 		8497DC2E23FC2F0700D150B4 /* Prod.Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D3A20A0511C73BCEC9975D0C /* Pods-lezzoo-tvOSTests.prod.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1809,6 +1754,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = "arm64 ";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1873,7 +1819,6 @@
 		};
 		8497DC3223FC2F1900D150B4 /* Prod.Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 597095BF6DBB352307B8D7F5 /* Pods-lezzoo-tvOS.prod.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1901,7 +1846,6 @@
 		};
 		8497DC3323FC2F1900D150B4 /* Prod.Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7FA2DF299E7C540479F219D /* Pods-lezzoo-tvOSTests.prod.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

@@ -2,7 +2,7 @@ import { refreshTokenEndpoint } from 'constants/endpoints';
 
 const API_URL = '';
 
-interface ITokens {
+export interface ITokens {
   accessToken?: string;
   refreshToken?: string;
 }
@@ -85,7 +85,7 @@ export const resetRefreshToken = (): void => {
 
 export const get = async (
   endpoint: string,
-  query: Record<string, string>,
+  query?: Record<string, any>,
 ): Promise<IReturnTypeFetch> => {
   let url = `${API_URL}/${endpoint}`;
 
