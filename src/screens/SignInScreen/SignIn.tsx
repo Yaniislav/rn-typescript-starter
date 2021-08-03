@@ -15,13 +15,8 @@ import FormPasswordInput from '../../components/FormComponents/FormPasswordInput
 type ISignInForm = ISignInAction;
 
 const SignInSchema = object().shape({
-  email: string()
-    .email('Invalid email')
-    .required(),
-  password: string()
-    .required()
-    .min(6)
-    .max(15),
+  email: string().email('Invalid email').required(),
+  password: string().required().min(6).max(15),
 });
 
 interface IProps {
@@ -29,16 +24,20 @@ interface IProps {
 }
 
 const SignIn: React.FC<IProps> = ({ onSubmit }: IProps) => {
-  const { errors, control, handleSubmit } = useForm<ISignInForm>({
+  const {
+    formState: { errors },
+    control,
+    handleSubmit,
+  } = useForm<ISignInForm>({
     resolver: yupResolver(SignInSchema),
   });
 
   const passwordRef = useRef<TextInput>(null);
 
-  const onSignInPress = useMemo(() => handleSubmit(onSubmit), [
-    onSubmit,
-    handleSubmit,
-  ]);
+  const onSignInPress = useMemo(
+    () => handleSubmit(onSubmit),
+    [onSubmit, handleSubmit],
+  );
 
   const onEmailNextPress = useCallback(() => {
     passwordRef.current?.focus();

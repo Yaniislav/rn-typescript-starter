@@ -1,9 +1,9 @@
-import React, { FC, Ref, forwardRef, useCallback } from 'react';
+import React, { Ref, forwardRef, useCallback } from 'react';
 import { View, TextInput, TextInputProps } from 'react-native';
 import {
   Control,
   Controller,
-  ControllerRenderProps,
+  ControllerProps,
   FieldError,
 } from 'react-hook-form';
 
@@ -13,11 +13,11 @@ import styles from './styles';
 
 export interface IFormTextInputProps extends Partial<TextInputProps> {
   error?: FieldError;
-  control: Control;
+  control: Control<any>;
   name: string;
 }
 
-const FormTextInput: FC<IFormTextInputProps> = (
+const FormTextInput = (
   { error, control, name, ...rest }: IFormTextInputProps,
   ref: Ref<TextInput>,
 ) => {
@@ -35,14 +35,14 @@ const FormTextInput: FC<IFormTextInputProps> = (
     return null;
   }, [error]);
 
-  const renderComponent = useCallback(
-    ({ onChange, onBlur, value }: ControllerRenderProps) => (
+  const renderComponent = useCallback<ControllerProps['render']>(
+    ({ field: { onChange, onBlur, value } }) => (
       <View style={styles.container}>
         <View style={styles.textInputContainer}>
           <DefaultTextInput
             style={styles.inputStyle}
             ref={ref}
-            onChangeText={value => onChange(value)}
+            onChangeText={(value) => onChange(value)}
             onBlur={onBlur}
             value={value}
             {...rest}
