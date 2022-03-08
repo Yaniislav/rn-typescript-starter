@@ -1,5 +1,5 @@
-import { verticalScale, scale } from 'react-native-size-matters';
 import { PixelRatio, StyleSheet } from 'react-native';
+import { scale, verticalScale } from '../utils/sizeScale';
 
 export const Metrics = {
   navBarHeight: verticalScale(50),
