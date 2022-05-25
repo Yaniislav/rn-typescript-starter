@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 
 import { persistStore, persistReducer } from 'redux-persist';
 import autoMergeLevel2 from 'redux-persist/lib/stateReconciler/autoMergeLevel2';
-import AsyncStorage from '@react-native-community/async-storage';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import Reactotron from 'configs/ReactotronConfig';
 
 import reducer from './reducers';
