@@ -20,7 +20,7 @@ const WelcomeScreen = ({ navigation }: WelcomeScreenProps): ReactElement => {
 
   return (
     <View style={styles.container}>
-      <DefaultText style={styles.title} size="large">
+      <DefaultText style={styles.title}>
         Welcome to Starter
       </DefaultText>
       <DefaultButton title={'Sign In'} onPress={onSignInPress} />

@@ -45,7 +45,7 @@ const SignIn: React.FC<IProps> = ({ onSubmit }: IProps) => {
 
   return (
     <KeyboardAvoidingWrapper contentContainerStyle={styles.container}>
-      <DefaultText style={styles.title} size="large">
+      <DefaultText style={styles.title}>
         Sign In
       </DefaultText>
       <FormEmailInput
