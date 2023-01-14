@@ -25,7 +25,7 @@ const FormTextInput = (
     if (error) {
       return (
         <View style={styles.errorContainer}>
-          <DefaultText size="small" type="error">
+          <DefaultText>
             {error?.message || ''}
           </DefaultText>
         </View>

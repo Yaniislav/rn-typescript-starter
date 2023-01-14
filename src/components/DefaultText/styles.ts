@@ -1,16 +1,8 @@
-import { StyleSheet, TextStyle } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Fonts, Colors } from '../../theme';
 
-interface IStyles {
-  text: TextStyle;
-  small: TextStyle;
-  medium: TextStyle;
-  large: TextStyle;
-  center: TextStyle;
-  errorType: TextStyle;
-}
 
-const styles = StyleSheet.create<IStyles>({
+export const styles = StyleSheet.create({
   text: {
     fontFamily: Fonts.primary.base,
     fontWeight: '400',
@@ -33,4 +25,3 @@ const styles = StyleSheet.create<IStyles>({
   },
 });
 
-export default styles;

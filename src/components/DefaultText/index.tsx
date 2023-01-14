@@ -1,53 +1,63 @@
-import React, { FC } from 'react';
-import { Text, StyleProp, TextStyle, TextProps } from 'react-native';
-
-import styles from './styles';
+import React, { ReactElement, ReactText, useMemo } from 'react';
+import { StyleProp, Text, TextProps, TextStyle } from 'react-native';
+import { styles } from './styles';
+import { scale } from '../../utils/sizeScale';
 
 interface IProps extends TextProps {
-  size?: 'small' | 'medium' | 'large';
   style?: StyleProp<TextStyle>;
-  center?: boolean;
-  children: string | typeof Text;
-  type?: 'error' | 'info';
+  type?: 'regular' | 'light' | 'bold' | 'book' | 'medium' | 'italic';
+  children: string | typeof Text | ReactText | ReactText[] | number;
+  fontSize?: number;
+  lineHeight?: number;
+  textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify' | undefined;
+  color?: string;
+  letterSpacing?: number;
 }
 
-const getSizeStyles = (size: IProps['size']) => {
-  if (size === 'small') {
-    return styles.small;
-  } else if (size === 'large') {
-    return styles.large;
-  } else return styles.medium;
-};
-
-const getTypeStyle = (type: IProps['type']) => {
-  if (type === 'error') {
-    return styles.errorType;
-  }
-
-  return null;
-};
-
-const DefaultText: FC<IProps> = ({
-  children,
-  size,
+const DefaultText = ({
+  type = 'regular',
+  fontSize,
+  lineHeight,
+  textAlign,
+  color,
   style,
-  center,
-  type,
+  children,
+  letterSpacing,
   ...rest
-}: IProps) => {
-  const sizeStyle = getSizeStyles(size);
-  const typeStyle = getTypeStyle(type);
+}: IProps): ReactElement => {
+  // will be implemented with custom fonts
+  // const typeStyle = styles[type];
+
+  const extraStyles = useMemo(() => {
+    const styleObject: {
+      lineHeight?: number;
+      fontSize?: number;
+      color?: string;
+      letterSpacing?: number;
+      textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify' | undefined;
+    } = {};
+    if (lineHeight) {
+      styleObject.lineHeight = scale(lineHeight);
+    }
+    if (fontSize) {
+      styleObject.fontSize = scale(fontSize);
+    }
+    if (textAlign) {
+      styleObject.textAlign = textAlign;
+    }
+
+    if (color) {
+      styleObject.color = color;
+    }
+    if (letterSpacing) {
+      styleObject.letterSpacing = letterSpacing;
+    }
+
+    return styleObject;
+  }, [fontSize, lineHeight, color, textAlign, letterSpacing]);
 
   return (
-    <Text
-      {...rest}
-      style={[
-        styles.text,
-        style,
-        sizeStyle,
-        typeStyle,
-        center ? styles.center : null,
-      ]}>
+    <Text {...rest} style={[styles.text, extraStyles, style]}>
       {children}
     </Text>
   );

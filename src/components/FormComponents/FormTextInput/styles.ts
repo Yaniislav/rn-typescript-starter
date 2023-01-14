@@ -1,6 +1,6 @@
 import { StyleSheet, ViewStyle, TextStyle } from 'react-native';
-import { scale } from 'react-native-size-matters';
 import { Metrics } from 'theme';
+import { scale } from '../../../utils/sizeScale';
 
 interface IStyle {
   container: ViewStyle;
