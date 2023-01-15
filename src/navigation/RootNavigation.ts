@@ -4,7 +4,7 @@ import {
   ParamListBase,
 } from '@react-navigation/native';
 
-export const navigationRef = React.createRef<NavigationContainerRef>();
+export const navigationRef = React.createRef<NavigationContainerRef<any>>();
 
 // functions below may be used in sagas or other non-component places
 
