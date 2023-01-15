@@ -1,10 +1,10 @@
-import React, { FC, Ref, forwardRef } from 'react';
-import { TextInput, TextInputProperties } from 'react-native';
+import React, { Ref, forwardRef } from 'react';
+import { TextInput, TextInputProps } from 'react-native';
 
 import styles from './styles';
 
-const DefaultTextInput: FC<TextInputProperties> = (
-  { style, ...rest }: TextInputProperties,
+const DefaultTextInput = (
+  { style, ...rest }: TextInputProps,
   ref: Ref<TextInput>,
 ) => {
   return (

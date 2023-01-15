@@ -61,10 +61,7 @@ export const makeRequestWithBody = async (
   method: string,
 ): Promise<IReturnTypeFetch> => {
   const url = `${API_URL}/${endpoint}`;
-
-  const data = await fetchAsync(url, { method, body });
-
-  return data;
+  return fetchAsync(url, { method, body: body as any });
 };
 
 export const setAuthToken = (token: string): void => {

@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactText, useMemo } from 'react';
+import React, { ReactElement, ReactNode, useMemo } from 'react';
 import { StyleProp, Text, TextProps, TextStyle } from 'react-native';
 import { styles } from './styles';
 import { scale } from '../../utils/sizeScale';
@@ -6,7 +6,7 @@ import { scale } from '../../utils/sizeScale';
 interface IProps extends TextProps {
   style?: StyleProp<TextStyle>;
   type?: 'regular' | 'light' | 'bold' | 'book' | 'medium' | 'italic';
-  children: string | typeof Text | ReactText | ReactText[] | number;
+  children: ReactNode;
   fontSize?: number;
   lineHeight?: number;
   textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify' | undefined;
