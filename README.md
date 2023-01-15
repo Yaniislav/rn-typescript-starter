@@ -1,5 +1,5 @@
 # rn-typescript-starter
-Simple starter for React Native development with Redux, React-Navigation 6 and Typescript. Flipper is enabled by default, RN v.0.67.3.
+Simple starter for React Native development with Redux, React-Navigation 6 and Typescript. Flipper is enabled by default, RN v.0.71.0.
 
 ## Setup
 
