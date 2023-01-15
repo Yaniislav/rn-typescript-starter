@@ -14,6 +14,5 @@ export const signUpAction = createAction<ISignUpAction>('signUp');
 export const didSignUpAction = createAction<IDidSignInAction>('didSignUp');
 
 export const signOutAction = createAction('signOut');
-export const didUpdateTokensAction = createAction<ITokenAction>(
-  'didUpdateTokens',
-);
+export const didUpdateTokensAction =
+  createAction<ITokenAction>('didUpdateTokens');
